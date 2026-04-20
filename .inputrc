@@ -1,0 +1,19 @@
+# enable Vi editing mode
+set editing-mode vi
+
+# map Emacs-style keys specifically for Vi's INSERT mode
+$if mode=vi
+    set keymap vi-insert
+    "\C-a": beginning-of-line
+    "\C-k": kill-line
+    "\C-e": end-of-line
+    "\C-u": unix-line-discard
+$endif
+# optional: Show mode indicator (e.g., (ins) or (arg)) 
+set show-mode-in-prompt on
+
+# configure cursor shapes
+# 2 = Block (Normal Mode)
+# 6 = I-beam (Insert Mode)
+set vi-ins-mode-string \1\e[6 q\2
+set vi-cmd-mode-string \1\e[2 q\2
