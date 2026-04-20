@@ -75,9 +75,9 @@ set backup
 set undofile
 
 " Consolidate all temporary files into one location
-set backupdir=~/.vim/temp/backup//
-set directory=~/.vim/temp/swap//
-set undodir=~/.vim/temp/undo//
+" set backupdir=~/.vim/temp/backup//
+" set directory=~/.vim/temp/swap//
+" set undodir=~/.vim/temp/undo//
 
 " optional: Keep the backup even after the file is successfully saved
 set writebackup
