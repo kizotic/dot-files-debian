@@ -114,34 +114,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# check cpu temp
-alias ws='watch sensors'
-
-# enable performance mode
-alias perfck='sudo cat /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy && cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor && cat /sys/devices/system/cpu/cpu*/cpufreq/energy_performance_preference'
-alias perf='~/bin/perf-mode.sh'
-
-# combine ifdown and ifup
-alias if-du='sudo ifdown wlp3s0 && sudo ifup wlp3s0'
-
-# numlock notification
-alias nlk="xset q | grep 'Num Lock' | awk '{print \"Num Lock: \" \$8}'"
-
-# jq piped into less, retaining colors
-alias jql="jq -C . | less -R"
-
-# quick xclip clipboard
-alias qclip="xclip -selection clipboard"
-
-# quick removal of preceding blanks
-alias qtrim="sed 's/^[[:blank:]]*//g'"
-
-# quick removal of trailing line break
-alias qlb="head -c -1"
-
-# quick ssh to rl
-alias sh91="ssh -i ~/.ssh/keys/rl kzt@192.168.1.91"
-
 # gtk dark theme
 export GTK_THEME="Adwaita-dark"
 
